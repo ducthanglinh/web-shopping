@@ -1,0 +1,19 @@
+.content-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.des {
+  width: 465px;
+  margin: auto;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
