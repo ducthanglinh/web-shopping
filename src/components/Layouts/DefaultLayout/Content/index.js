@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import images from "~/assets/images";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 const cx = classNames.bind(styles);
 
 function SampleNextArrow(props) {

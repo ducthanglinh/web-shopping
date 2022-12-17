@@ -37,6 +37,7 @@
   display: none;
   animation: growDown 300ms ease-in-out forwards;
   transform-origin: top center;
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 3.76px 0.24px;
   a {
     color: var(--primary);
     font-size: 1.6rem;

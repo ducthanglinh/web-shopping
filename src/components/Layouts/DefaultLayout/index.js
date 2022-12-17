@@ -1,5 +1,7 @@
 import Contact from "./Contact";
 import Content from "./Content";
+import Banner from "./Content/Banner";
+import LastestNew from "./Content/LastestNews";
 import OurProduct from "./Content/OurProduct";
 import Subnav from "./Content/subNav";
 import Footer from "./Footer";
@@ -21,6 +23,12 @@ function DefaultLayout() {
         <div className="OurProducts">
           <OurProduct />
         </div>
+        <div className="Banner">
+          <Banner />
+        </div>
+
+        <div className="News"></div>
+        <LastestNew />
         <Contact />
       </div>
       <Footer />

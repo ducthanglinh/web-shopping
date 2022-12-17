@@ -1,9 +1,7 @@
+import { DefaultLayout } from "~/components/Layouts";
+
 function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  return <DefaultLayout />;
 }
 
 export default Home;

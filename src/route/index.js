@@ -1,3 +1,5 @@
+import config from "~/config";
+
 import Home from "~/pages/Home";
 import About from "~/pages/About";
 import Bedroom from "~/pages/HomeFurnitures/Bedroom";
@@ -9,51 +11,56 @@ import OfficeTable from "~/pages/OfficeFurnitures/OfficeTable";
 import HospitalBed from "~/pages/HospitalFurnitures/HospitalBed";
 import HospitalUtility from "~/pages/HospitalFurnitures/HospitalUtility";
 import Contact from "~/pages/Contact";
+import Login from "~/pages/Login";
 
 const publicRoutes = [
   {
-    path: "/",
+    path: config.routes.home,
     component: Home,
   },
   {
-    path: "/about",
+    path: config.routes.about,
     component: About,
   },
   {
-    path: "/bedroom",
+    path: config.routes.bedroom,
     component: Bedroom,
   },
   {
-    path: "/dining",
+    path: config.routes.dining,
     component: Dining,
   },
   {
-    path: "/living",
+    path: config.routes.living,
     component: Living,
   },
   {
-    path: "/lounge",
+    path: config.routes.lounge,
     component: Lounge,
   },
   {
-    path: "/office-chair",
+    path: config.routes.officechair,
     component: OfficeChair,
   },
   {
-    path: "/office-table",
+    path: config.routes.officetable,
     component: OfficeTable,
   },
   {
-    path: "/hospital-bed",
+    path: config.routes.hospitalBed,
     component: HospitalBed,
   },
   {
-    path: "/hospital-utility",
+    path: config.routes.hospitalUtility,
     component: HospitalUtility,
   },
   {
-    path: "/contact",
+    path: config.routes.contact,
     component: Contact,
+  },
+  {
+    path: config.routes.login,
+    component: Login,
   },
 ];
 

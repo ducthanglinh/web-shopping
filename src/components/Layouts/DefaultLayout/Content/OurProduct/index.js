@@ -1,10 +1,39 @@
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
-
+import { useEffect, useRef } from "react";
 import classNames from "classnames/bind";
+import Products from "~/components/Products";
 import styles from "./OurProduct.module.scss";
+import { newArrival, onSale, featured, tending } from "./DataProducts";
+
 const cx = classNames.bind(styles);
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 function OurProduct() {
+  const tabs = useRef();
+  const panes = useRef();
+  useEffect(() => {
+    const tabClass = tabs.current.className;
+    const paneClass = panes.current.className;
+
+    const listTabs = $$(`.${tabClass}`);
+    const listPanes = $$(`.${paneClass}`);
+    listTabs.forEach((tab, index) => {
+      const pane = listPanes[index];
+      tab.onclick = function () {
+        const tabClassActive = cx("tab-item") + "." + cx("active");
+        const tabActive = $(`.${tabClassActive}`);
+        tabActive.classList.remove(cx("active"));
+        this.classList.add(cx("active"));
+
+        const paneClassActive = cx("tab-pane") + "." + cx("active");
+        const paneActive = $(`.${paneClassActive}`);
+        paneActive.classList.remove(cx("active"));
+        pane.classList.add(cx("active"));
+      };
+    });
+  }, []);
+
   return (
     <div className={cx("wrapper")}>
       <div className={cx("content-title")}>
@@ -16,14 +45,34 @@ function OurProduct() {
       </div>
 
       <div className={cx("tabs-container")}>
-        <Tabs>
-          <TabList>
-            <Tab>New Arrival</Tab>
-            <Tab>Feature</Tab>
-            <Tab>On Sale</Tab>
-            <Tab>Tending</Tab>
-          </TabList>
-        </Tabs>
+        <div className={cx("tab-title")}>
+          <div ref={tabs} className={cx("tab-item", "active")}>
+            New Arrival
+          </div>
+          <div ref={tabs} className={cx("tab-item")}>
+            Featured
+          </div>
+          <div ref={tabs} className={cx("tab-item")}>
+            On Sale
+          </div>
+          <div ref={tabs} className={cx("tab-item")}>
+            Tending
+          </div>
+        </div>
+      </div>
+      <div className={cx("tab-content")}>
+        <div ref={panes} className={cx("tab-pane", "active")}>
+          <Products dataProducts={newArrival} name="newArrival" />
+        </div>
+        <div ref={panes} className={cx("tab-pane")}>
+          <Products dataProducts={featured} name="featured" />
+        </div>
+        <div ref={panes} className={cx("tab-pane")}>
+          <Products dataProducts={onSale} name="onSale" />
+        </div>
+        <div ref={panes} className={cx("tab-pane")}>
+          <Products dataProducts={tending} name="tending" />
+        </div>
       </div>
     </div>
   );

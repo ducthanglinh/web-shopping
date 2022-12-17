@@ -1,131 +1,73 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 import classNames from "classnames/bind";
 import styles from "./Navigation.module.scss";
+import { Link } from "react-router-dom";
+import config from "~/config";
 const cx = classNames.bind(styles);
 
 function Navigation() {
-  const menuLists = [
-    {
-      id: 1,
-      name: "Home",
-    },
-    {
-      id: 2,
-      name: "About",
-    },
-    {
-      id: 1,
-      name: "Home Furniture",
-      icon: <FontAwesomeIcon icon={faChevronDown} />,
-      more: [
-        {
-          title: "Bedroom",
-        },
-        {
-          title: "Dining",
-        },
-        {
-          title: "Living",
-        },
-      ],
-    },
-    {
-      id: 1,
-      name: "Office Furniture",
-      icon: <FontAwesomeIcon icon={faChevronDown} />,
-      more: [
-        {
-          title: "Lounge",
-        },
-        {
-          title: "Office Chair",
-        },
-        {
-          title: "Office Table",
-        },
-      ],
-    },
-    {
-      id: 1,
-      name: "Hospital Furniture",
-      icon: <FontAwesomeIcon icon={faChevronDown} />,
-      more: [
-        {
-          title: "Hospital Bed",
-        },
-        {
-          title: "Hospital Utility",
-        },
-      ],
-    },
-    {
-      id: 1,
-      name: "Contact",
-    },
-  ];
   return (
     <div className={cx("wrapper")}>
       <ul className={cx("menu")}>
         <li className={cx("menuTitle")}>
-          <a href="#">Home</a>
+          <Link to={config.routes.home}>Home</Link>
         </li>
         <li className={cx("menuTitle")}>
-          <a href="#">About</a>
+          <Link to={config.routes.about}>About</Link>
         </li>
         <li className={cx("menuTitle")}>
-          <a href="#">
+          <Link to={config.routes.home}>
             Home Furniture
             <FontAwesomeIcon className={cx("down-icon")} icon={faChevronDown} />
-          </a>
+          </Link>
           <ul className={cx("menuItem")}>
             <li>
-              <a href="#">Bedroom</a>
+              <Link to={config.routes.bedroom}>Bedroom</Link>
             </li>
             <li>
-              <a href="#">Dining</a>
+              <Link to={config.routes.dining}>Dining</Link>
             </li>
             <li>
-              <a href="#">Living</a>
+              <Link to={config.routes.living}>Living</Link>
             </li>
           </ul>
         </li>
         <li className={cx("menuTitle")}>
-          <a href="#">
+          <Link to={config.routes.home}>
             Office Furniture
             <FontAwesomeIcon className={cx("down-icon")} icon={faChevronDown} />
-          </a>
+          </Link>
           <ul className={cx("menuItem")}>
             <li>
-              <a href="#">Lounge</a>
+              <Link to={config.routes.lounge}>Lounge</Link>
             </li>
             <li>
-              <a href="#">Office Chair</a>
+              <Link to={config.routes.officechair}>Office Chair</Link>
             </li>
             <li>
-              <a href="#">Office Table</a>
+              <Link to={config.routes.officetable}>Office Table</Link>
             </li>
           </ul>
         </li>
         <li className={cx("menuTitle")}>
-          <a href="#">
+          <Link to={config.routes.home}>
             Hospital Furniture
             <FontAwesomeIcon className={cx("down-icon")} icon={faChevronDown} />
-          </a>
+          </Link>
           <ul className={cx("menuItem")}>
             <li>
-              <a href="#">Hospital Bed </a>
+              <Link to={config.routes.hospitalBed}>Hospital Bed </Link>
             </li>
             <li>
-              <a href="#">Hospital Unility </a>
+              <Link to={config.routes.hospitalUtility}>Hospital Unility </Link>
             </li>
           </ul>
         </li>
         <li className={cx("menuTitle")}>
-          <a href="#">Contact</a>
+          <Link to={config.routes.contact}>Contact</Link>
         </li>
       </ul>
     </div>
