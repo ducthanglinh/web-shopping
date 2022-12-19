@@ -12,6 +12,7 @@ import HospitalBed from "~/pages/HospitalFurnitures/HospitalBed";
 import HospitalUtility from "~/pages/HospitalFurnitures/HospitalUtility";
 import Contact from "~/pages/Contact";
 import Login from "~/pages/Login";
+import SignUp from "~/pages/SignUp";
 
 const publicRoutes = [
   {
@@ -62,6 +63,22 @@ const publicRoutes = [
     path: config.routes.login,
     component: Login,
   },
+  {
+    path: config.routes.signup,
+    component: SignUp,
+  },
+  // {
+  //   path: config.routes.cart,
+  //   component: Cart,
+  // },
+  // {
+  //   path: config.routes.wishlist,
+  //   component: Wishlist,
+  // },
+  // {
+  //   path: config.routes.Compare,
+  //   component: Compare,
+  // },
 ];
 
 const privateRoutes = [];

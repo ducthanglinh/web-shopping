@@ -5,10 +5,10 @@ import classNames from "classnames/bind";
 import styles from "./Login.module.scss";
 import { Link } from "react-router-dom";
 import config from "~/config";
+import routes from "~/config/routes";
+
 import Contact from "~/components/Layouts/DefaultLayout/Contact";
 import Footer from "~/components/Layouts/DefaultLayout/Footer";
-import { hospitalBed } from "~/pages/datas";
-import RenderProduct from "~/components/Layouts/component/Filter";
 
 const cx = classNames.bind(styles);
 
@@ -51,14 +51,14 @@ function Login() {
             </div>
             <div className={cx("Singin")}>
               <button type="submit" className={cx("btnSingin")}>
-                SIGN IN
+                SIGNIN
               </button>
             </div>
 
             <div className={cx("btnOther")}>
-              <a href="#" className={cx("linkCreate")}>
+              <Link to={routes.signup} href="#" className={cx("linkCreate")}>
                 CREATE A ACCOUNT
-              </a>
+              </Link>
               <a href="#" className={cx("linkForget")}>
                 FORGET PASSWORD?
               </a>

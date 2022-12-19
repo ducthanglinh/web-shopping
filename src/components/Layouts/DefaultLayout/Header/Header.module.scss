@@ -16,6 +16,8 @@
 }
 .tools {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button {
   background: none;
@@ -26,24 +28,57 @@ button {
   cursor: pointer;
   position: relative;
 }
-button + button {
+.dvTool {
+  position: relative;
+}
+.dvTool + .dvTool {
   margin-left: 36px;
 
   &::before {
     content: "";
     position: absolute;
-    height: calc(100% - 4px);
+    height: calc(100% - 5px);
     border-left: 1px solid #000000;
     top: 2px;
     left: -18px;
   }
 }
+.iconList {
+  position: absolute;
+  text-align: left;
+  width: 130px;
+  display: none;
+  box-shadow: rgb(0 0 0 / 6%) 0px 0px 12px 3px;
+  z-index: 11;
+  background-color: #fff;
+  left: -44px;
+  top: 44px;
+  padding: 0 15px;
+}
+
 .search,
-.user,
 .cart {
   &:hover {
     color: var(--orange);
     transition: all linear 0.2s;
+  }
+}
+.user {
+  position: relative;
+  &:hover {
+    color: var(--orange);
+    transition: all linear 0.2s;
+    .iconList {
+      display: block;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 215%;
+    height: 20px;
+    left: -13px;
+    top: 23px;
   }
 }
 
@@ -64,4 +99,16 @@ button + button {
     top: 3px;
     right: -3px;
   }
+}
+
+.iconItem {
+  padding: 10px;
+}
+.iconItem + .iconItem {
+  border-top: 1px solid rgb(235, 235, 235);
+}
+.iconLink {
+  color: var(--primary);
+  font-size: 1.3rem;
+  line-height: 2.5rem;
 }

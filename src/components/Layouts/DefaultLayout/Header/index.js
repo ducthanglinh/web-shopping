@@ -6,6 +6,8 @@ import {
   faUser,
   faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import routes from "~/config/routes";
 const cx = classNames.bind(styles);
 function Header() {
   return (
@@ -18,18 +20,49 @@ function Header() {
           />
         </div>
         <div className={cx("tools")}>
-          <button className={cx("search")}>
-            <FontAwesomeIcon
-              className={cx("search-icon")}
-              icon={faMagnifyingGlass}
-            />
-          </button>
-          <button className={cx("user")}>
-            <FontAwesomeIcon className={cx("user-icon")} icon={faUser} />
-          </button>
-          <button className={cx("cart")}>
-            <FontAwesomeIcon className={cx("cart-icon")} icon={faBagShopping} />
-          </button>
+          <div className={cx("dvTool")}>
+            <button className={cx("search")}>
+              <FontAwesomeIcon
+                className={cx("search-icon")}
+                icon={faMagnifyingGlass}
+              />
+            </button>
+          </div>
+          <div className={cx("dvTool")}>
+            <button className={cx("user")}>
+              <FontAwesomeIcon className={cx("user-icon")} icon={faUser} />
+              <ul className={cx("iconList")}>
+                <li className={cx("iconItem")}>
+                  <Link to={routes.login} className={cx("iconLink")}>
+                    Signin
+                  </Link>
+                </li>
+                <li className={cx("iconItem")}>
+                  <a className={cx("iconLink")} href="#">
+                    Cart
+                  </a>
+                </li>
+                <li className={cx("iconItem")}>
+                  <a className={cx("iconLink")} href="#">
+                    Wishlist
+                  </a>
+                </li>
+                <li className={cx("iconItem")}>
+                  <a className={cx("iconLink")} href="#">
+                    Compare
+                  </a>
+                </li>
+              </ul>
+            </button>
+          </div>
+          <div className={cx("dvTool")}>
+            <button className={cx("cart")}>
+              <FontAwesomeIcon
+                className={cx("cart-icon")}
+                icon={faBagShopping}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </header>

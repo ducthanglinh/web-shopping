@@ -11,6 +11,7 @@ const routes = {
   hospitalUtility: "/hospitalUtility",
   contact: "/contact",
   login: "/login",
+  signup: "/signup",
 };
 
 export default routes;
