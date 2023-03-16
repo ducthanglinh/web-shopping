@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/web-shopping/static/css/main.4ad09c6b.css",
-    "main.js": "/web-shopping/static/js/main.4b2e1f59.js",
-    "static/js/787.1b6e51ef.chunk.js": "/web-shopping/static/js/787.1b6e51ef.chunk.js",
-    "static/media/slider-1.png": "/web-shopping/static/media/slider-1.171cb1c2e9356637def4.png",
-    "static/media/slider-2.png": "/web-shopping/static/media/slider-2.8b888191d32034ff849f.png",
-    "static/media/slick.svg": "/web-shopping/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/web-shopping/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/web-shopping/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/web-shopping/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/web-shopping/index.html",
-    "main.4ad09c6b.css.map": "/web-shopping/static/css/main.4ad09c6b.css.map",
-    "main.4b2e1f59.js.map": "/web-shopping/static/js/main.4b2e1f59.js.map",
-    "787.1b6e51ef.chunk.js.map": "/web-shopping/static/js/787.1b6e51ef.chunk.js.map"
+    "main.css": "/static/css/main.99f12e60.css",
+    "main.js": "/static/js/main.3b840320.js",
+    "static/js/787.1b6e51ef.chunk.js": "/static/js/787.1b6e51ef.chunk.js",
+    "static/media/slider-1.png": "/static/media/slider-1.171cb1c2e9356637def4.png",
+    "static/media/slider-2.png": "/static/media/slider-2.8b888191d32034ff849f.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.99f12e60.css.map": "/static/css/main.99f12e60.css.map",
+    "main.3b840320.js.map": "/static/js/main.3b840320.js.map",
+    "787.1b6e51ef.chunk.js.map": "/static/js/787.1b6e51ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ad09c6b.css",
-    "static/js/main.4b2e1f59.js"
+    "static/css/main.99f12e60.css",
+    "static/js/main.3b840320.js"
   ]
 }
